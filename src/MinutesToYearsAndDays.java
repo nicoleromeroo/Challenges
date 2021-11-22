@@ -25,7 +25,22 @@ public class MinutesToYearsAndDays {
 
     public static void main(String[] args) {
 
-        //System.out.println();
+        printYearsAndDays(1051200);
+    }
+
+    public static void printYearsAndDays(long minutes) {
+        if (minutes < 0) {
+            System.out.println("Invalid value");
+        }
+        else {
+            long years;
+            years = minutes / 525600;
+            long remainingMinutes = minutes % 525600;
+            long days = remainingMinutes / 1440;
+
+
+            System.out.println(minutes + " min = " + years + " y and " + days + " d");
+        }
     }
 
 }
